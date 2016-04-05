@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" data-semver="2.1.1" data-require="jquery@*"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+  <!-- <script src="jquery-form-serializer.js"></script> -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="icon" type="image/png" href="http://img.wdjimg.com/mms/icon/v1/9/b6/6558844ad11d9bb55c363b7c33507b69_256_256.png">
+  <style>
+  img {
+      width: 60%;
+      height: auto;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+  <img src="images/alimeiliLogo.jpg" alt="alimeili" style="width:532;height:228px;">
+
+    <div class="well">
+      <form id="ajaxForm" class="form-vertical" role="form" autocomplete="off" method="POST" action="https://shipapi.pezapp.io">
+        <fieldset>
+          <div class="col-xs-12">
+            <label class="control-label" for="products">Products:</label>
+            <div class="control-group" id="products">
+              <div class="controls">
+                <div class="entry input-group form-group" id='entry'>
+                  <div class="form-group col-xs-12 col-sm-6">
+                    <label for="sku" class="control-label">SKU</label>
+                    <input type="text" class="controls form-control sku" name="sku" id="sku" placeholder="Enter SKU">
+                  </div>
+
+                  <div class="form-group col-xs-12 col-sm-6">
+                    <label for="quantity" class="control-lable">Quantity</label>
+                    <input type="number" class="controls form-control quantity" name="quantity" id="quantity" placeholder="Enter Quantity">
+                  </div>
+                  <span class="input-group-btn">
+                    <button class="btn btn-success btn-add" type="button">
+                      <span class="glyphicon glyphicon-plus"></span>
+                    </button>
+                  </span>
+                </div>
+                <div id="container"></div>
+              </div>
+            </div>
+            <small>Press <span class="glyphicon glyphicon-plus gs"></span> to add another product :)</small>
+          </div>
+          <div class="pull-right">
+            <br>
+            <div class="btn-group col-xs-12">
+              <button type="button" class="btn btn-success" id="sendPlainJSon">Get price</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <div class="container">
+    <div class="well col-xs-12">
+      <div class="control-label col-xs-12">
+        <label>Data sent:</label>
+      </div>
+      <div class="col-xs-12">
+        <textarea class="form-control" readonly id="dataSent">here: data sent...</textarea>
+        <br>
+      </div>
+      <div class="control-label col-xs-12">
+        <label>Result:</label>
+      </div>
+      <div class="col-xs-12">
+        <textarea class="form-control" readonly id="results">Waiting to send request</textarea>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <h2>Results</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Sku</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John</td>
+          <td>Doe</td>
+          <td>john@example.com</td>
+          <td>john@example.com</td>
+        </tr>
+        <tr>
+          <td>Mary</td>
+          <td>Moe</td>
+          <td>mary@example.com</td>
+          <td>mary@example.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted">Built with love and coffee. By jutinko.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
