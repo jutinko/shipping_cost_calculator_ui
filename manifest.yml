@@ -3,3 +3,4 @@ applications:
   - name: ship
     memory: 64M
     instances: 3
+    enable-diego: true
